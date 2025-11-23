@@ -25,15 +25,18 @@ export interface Exercise {
   muscleGroup: string;
   sets: number;
   reps: string;
+  rpe?: number; // Rate of Perceived Exertion (1-10)
+  restTimeSec?: number; // Rest between sets in seconds
+  technique?: 'Straight Set' | 'Dropset' | 'Rest-Pause' | 'Superset' | 'FST-7';
   notes?: string;
-  videoUrl?: string; // Placeholder for search link
 }
 
 export interface WorkoutRoutine {
   id: string;
   name: string;
   description: string;
-  split: 'ABC' | 'ABCD' | 'PPL' | 'UpperLower' | 'FullBody' | 'Custom';
+  split: 'ABC' | 'ABCD' | 'ABCDE' | 'PPL' | 'UpperLower' | 'FullBody' | 'Custom';
+  methodology?: string; // e.g. "High Volume", "Heavy Duty"
   exercises: Exercise[];
   createdBy: 'AI' | 'USER' | 'TRAINER';
 }
@@ -78,6 +81,7 @@ export interface Trainer {
   location: string;
   rating: number;
   isOnline: boolean;
+  studentsCount: number;
 }
 
 export interface Checkpoint {

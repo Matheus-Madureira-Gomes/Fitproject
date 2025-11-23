@@ -2,9 +2,9 @@ import { Trainer, Post, UserRole } from "./types";
 import { Users, User, MapPin } from "lucide-react";
 
 export const MOCK_TRAINERS: Trainer[] = [
-  { id: 't1', name: 'Ramon Dino', specialty: 'Hypertrophy / Posing', location: 'São Paulo, BR', rating: 4.9, isOnline: true },
-  { id: 't2', name: 'Chris Bumstead', specialty: 'Classic Physique', location: 'Ottawa, CA', rating: 5.0, isOnline: false },
-  { id: 't3', name: 'Local Coach John', specialty: 'Weight Loss', location: 'New York, NY', rating: 4.5, isOnline: true },
+  { id: 't1', name: 'Ramon Dino', specialty: 'Hypertrophy / Posing', location: 'São Paulo, BR', rating: 4.9, isOnline: true, studentsCount: 1542 },
+  { id: 't2', name: 'Chris Bumstead', specialty: 'Classic Physique', location: 'Ottawa, CA', rating: 5.0, isOnline: false, studentsCount: 8500 },
+  { id: 't3', name: 'Local Coach John', specialty: 'Weight Loss', location: 'New York, NY', rating: 4.5, isOnline: true, studentsCount: 24 },
 ];
 
 export const MOCK_POSTS: Post[] = [
